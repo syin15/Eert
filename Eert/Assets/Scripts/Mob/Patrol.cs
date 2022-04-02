@@ -35,10 +35,13 @@ public class Patrol : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-        Vector2 force = collision.gameObject.transform.position - transform.position;
-        collision.gameObject.GetComponent<Rigidbody2D>().AddForce(force * forceMuliplier);
-        Debug.Log("collided");
+        if(collision.gameObject.tag == "Player")
+        {
+            Vector2 force = collision.gameObject.transform.position - transform.position;
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(force * forceMuliplier);
+            Debug.Log("collided");
+        }
+        
     }
 
     void Move()
