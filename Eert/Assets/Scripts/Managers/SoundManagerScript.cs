@@ -11,7 +11,7 @@ public class SoundManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        jumpSound = Resources.Load<AudioClip>("Jumping_effect");
+        jumpSound = Resources.Load<AudioClip>("Nodelay-jumping_effect");
         fallingSound = Resources.Load<AudioClip>("falling_effect");
         eyeBallSound = Resources.Load<AudioClip>("eyeballs_effect");
         mainMenuSound = Resources.Load<AudioClip>("menu_music");
