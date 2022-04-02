@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public GameObject menuButtons;
     public GameObject creditPage;
     public AudioSource menuMusic;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class MainMenu : MonoBehaviour
         if (menuButtons) menuButtons.SetActive(true);
         if (creditPage) creditPage.SetActive(false);
         if (menuMusic) menuMusic.Play();
+        if (player) player.GetComponent<PlayerMovement>().enabled = false;
 
     }
 
@@ -38,6 +40,8 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Start Game");
         menuButtons.SetActive(false);
+        player.GetComponent<PlayerMovement>().enabled = true;
+
 
     }
 
