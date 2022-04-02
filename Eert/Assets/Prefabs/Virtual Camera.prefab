@@ -61,20 +61,20 @@ MonoBehaviour:
   m_LookaheadSmoothing: 10.5
   m_LookaheadIgnoreY: 0
   m_XDamping: 0
-  m_YDamping: 0
+  m_YDamping: 4
   m_ZDamping: 0
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.74
+  m_ScreenY: 0.6999999
   m_CameraDistance: 10
   m_DeadZoneWidth: 2
-  m_DeadZoneHeight: 0.12
+  m_DeadZoneHeight: 0.4
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 2
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneHeight: 0.76
   m_BiasX: 0
-  m_BiasY: -0.00000008765389
+  m_BiasY: -0.00000012417635
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7122235243400857943}
   - component: {fileID: 7122235243400859304}
   m_Layer: 0
-  m_Name: CM vcam1
+  m_Name: Virtual Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

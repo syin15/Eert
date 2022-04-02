@@ -8,6 +8,7 @@ public class NormalDoor : MonoBehaviour
     [SerializeField] private float timeToBreak;
     [SerializeField] private float currentTime = 0.0f;
     private bool hasCollided = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class NormalDoor : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            SoundManagerScript.PlaySound("door");
+            if(!hasCollided) SoundManagerScript.PlaySound("door");
             hasCollided = true;
         }
     }
