@@ -35,6 +35,7 @@ public class NormalDoor : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            SoundManagerScript.PlaySound("door");
             hasCollided = true;
         }
     }
