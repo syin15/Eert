@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class BedRest : MonoBehaviour
 {
     private bool inRange = false;
     public GameObject instruction;
+    public GameObject menuButtons;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,10 @@ public class BedRest : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                if(menuButtons != null)
+                {
+                    menuButtons.SetActive(false);
+                }
             }
         }
         else
