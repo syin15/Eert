@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/First Level Without Menu.unity
     guid: 528bbf70179684d868a88a32e51e4978
+  - enabled: 1
+    path: Assets/Scenes/End_Scene.unity
+    guid: b435ab70bfbd04348888f46f28a670b4
   m_configObjects: {}
