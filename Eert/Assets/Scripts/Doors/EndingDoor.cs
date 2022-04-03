@@ -10,7 +10,7 @@ public class EndingDoor : MonoBehaviour
     private bool roundTwo = false;
     public GameObject instruction;
 
-    private bool isDoorInRoundTwo = false;
+    [SerializeField] private bool isDoorInRoundTwo = false;
     // Start is called before the first frame update
     void Start()
     {

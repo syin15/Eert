@@ -33,7 +33,7 @@ public class NormalDoor : MonoBehaviour
         if (hasCollided)
         {
             currentTime += Time.fixedDeltaTime;
-            animator.SetBool("playerCollided", true);
+            animator.SetBool("hasCollided", true);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
