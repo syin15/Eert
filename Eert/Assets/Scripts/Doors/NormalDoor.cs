@@ -8,6 +8,8 @@ public class NormalDoor : MonoBehaviour
     [SerializeField] private float timeToBreak;
     [SerializeField] private float currentTime = 0.0f;
     private bool hasCollided = false;
+
+    public Animator animator;
     
 
     // Start is called before the first frame update
@@ -31,6 +33,7 @@ public class NormalDoor : MonoBehaviour
         if (hasCollided)
         {
             currentTime += Time.fixedDeltaTime;
+            animator.SetBool("playerCollided", true);
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
