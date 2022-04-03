@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoundManagerScript : MonoBehaviour
 {
     [SerializeField] public static AudioClip jumpSound;
-    public static AudioClip fallingSound, eyeBallSound, mainMenuSound, doorSound;
+    public static AudioClip fallingSound, eyeBallSound, mainMenuSound, doorSound, doorBreakSound;
     [SerializeField] private static AudioSource audioSource;
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class SoundManagerScript : MonoBehaviour
         eyeBallSound = Resources.Load<AudioClip>("eyeballs_effect");
         mainMenuSound = Resources.Load<AudioClip>("menu_music");
         doorSound = Resources.Load<AudioClip>("Door_effect");
-
+        doorBreakSound = Resources.Load<AudioClip>("Break_effect");
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -44,6 +44,9 @@ public class SoundManagerScript : MonoBehaviour
                 break;
             case "door":
                 audioSource.PlayOneShot(doorSound);
+                break;
+            case "doorBreak":
+                audioSource.PlayOneShot(doorBreakSound);
                 break;
         }
     }

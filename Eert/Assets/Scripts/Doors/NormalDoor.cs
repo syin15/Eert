@@ -21,6 +21,7 @@ public class NormalDoor : MonoBehaviour
     {
         if(currentTime >= timeToBreak)
         {
+            SoundManagerScript.PlaySound("doorBreak");
             Destroy(gameObject);
         }
     }
