@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2272159735
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Doors
+    uniqueID: 2333145005
+    locked: 0
+  - name: Mob
+    uniqueID: 3640986413
+    locked: 0
+  - name: Player
+    uniqueID: 4050290305
     locked: 0

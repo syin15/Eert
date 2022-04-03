@@ -13,7 +13,7 @@ public class EndingDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (instruction) instruction.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class EndingDoor : MonoBehaviour
         }
         else
         {
-            instruction.SetActive(false);
+           // instruction.SetActive(false);
         }
 
     }
