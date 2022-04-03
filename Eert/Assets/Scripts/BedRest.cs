@@ -9,7 +9,7 @@ public class BedRest : MonoBehaviour
     private bool inRange = false;
     public GameObject instruction;
     public GameObject menuButtons;
-
+    [SerializeField] bool isFirstLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +24,19 @@ public class BedRest : MonoBehaviour
             instruction.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                if(menuButtons != null)
+                if (isFirstLevel)
                 {
-                    menuButtons.SetActive(false);
+                    SceneManager.LoadScene("First Level Without Menu");
                 }
+                else
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    if (menuButtons != null)
+                    {
+                        menuButtons.SetActive(false);
+                    }
+                }
+                
             }
         }
         else

@@ -40,7 +40,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Start Game");
         menuButtons.SetActive(false);
         player.GetComponent<PlayerMovement>().enabled = true;
-
+        SoundManagerScript.PlaySound("gameMusic");
 
     }
 

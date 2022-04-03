@@ -10,6 +10,7 @@ public class EndingDoor : MonoBehaviour
     private bool roundTwo = false;
     public GameObject instruction;
 
+    private bool isDoorInRoundTwo = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,12 @@ public class EndingDoor : MonoBehaviour
             instruction.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadScene("Round 2");
+                if (!isDoorInRoundTwo)
+                {
+                    SceneManager.LoadScene("Round 2");
+                    isDoorInRoundTwo = true;
+                }
+                else SceneManager.LoadScene("End_Scene");
             }
         }
         else
